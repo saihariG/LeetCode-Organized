@@ -59,5 +59,16 @@ public class FirstUniqueCharacter {
             return -1;
         return queue.peek();
     }
+
+    public int firstUniqChar4(String s) {
+
+        for(char c : s.toCharArray()) {
+            if(s.indexOf(c) == s.lastIndexOf(c)) {
+                return s.indexOf(c);
+            }
+        }
+
+        return -1;
+    }
 }
 
